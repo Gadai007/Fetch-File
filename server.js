@@ -12,7 +12,6 @@ app.use(express.static(__dirname + '/uploads'))
 app.set('view engine', 'ejs')
 
 app.get('/', async (req, res) => {
-
     const items = await User.findAll()
     res.render('home', {
         posts: items
@@ -50,3 +49,4 @@ sequelize.sync({ alter: true }).then(() => {
     })
 }).catch(err => console.log(err))
 
+// https://drive.google.com/drive/folders/12XjIqpPNfZSsO47U4W_fcQz8yYZUNSpy
